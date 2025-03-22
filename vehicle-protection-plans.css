@@ -1,0 +1,1380 @@
+/* Ultra Premium styling for Vehicle Protection Plans */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  /* Enhanced color system with gradients */
+  --primary: #2c7be5;
+  --primary-hover: #1a68d1;
+  --primary-light: rgba(44, 123, 229, 0.1);
+  --primary-gradient: linear-gradient(135deg, #2c7be5, #1a68d1);
+
+  /* Refined plan colors */
+  --platinum: #8dd3c7;
+  --platinum-light: rgba(141, 211, 199, 0.15);
+  --platinum-gradient: linear-gradient(135deg, #8dd3c7, #5aafa0);
+
+  --gold: #a6cee3;
+  --gold-light: rgba(166, 206, 227, 0.15);
+  --gold-gradient: linear-gradient(135deg, #a6cee3, #7ab5d6);
+
+  --silver: #ffffb3;
+  --silver-light: rgba(255, 255, 179, 0.15);
+  --silver-gradient: linear-gradient(135deg, #ffffb3, #e6e68a);
+
+  --bronze: #fdb462;
+  --bronze-light: rgba(253, 180, 98, 0.15);
+  --bronze-gradient: linear-gradient(135deg, #fdb462, #e89339);
+
+  /* Sophisticated text colors */
+  --text-primary: #12263f;
+  --text-secondary: #5e6e82;
+  --text-muted: #95aac9;
+  --text-light: #ffffff;
+
+  /* Enhanced backgrounds */
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --bg-subtle: rgba(0, 0, 0, 0.02);
+  --bg-highlight: rgba(44, 123, 229, 0.05);
+
+  /* Refined borders */
+  --border-color: rgba(0, 0, 0, 0.12);
+  --border-light: rgba(0, 0, 0, 0.05);
+  --border-focus: rgba(44, 123, 229, 0.5);
+
+  /* Advanced shadows */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-primary: 0 4px 10px rgba(44, 123, 229, 0.25);
+
+  /* Refined border radius */
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-full: 9999px;
+
+  /* Enhanced transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-standard: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+  /* Spacing system */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Z-index layers */
+  --z-base: 1;
+  --z-above: 10;
+  --z-modal: 100;
+  --z-overlay: 1000;
+}
+
+/* Base styles with premium typography */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(248, 249, 250, 0.8), rgba(248, 249, 250, 0.95)),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232c7be5' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar for the entire page */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: var(--border-radius-full);
+  border: 2px solid var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Enhanced header section with premium visual appeal */
+.header-section {
+  background-color: var(--bg-white);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-5) 0;
+  margin-top: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  animation: fadeInDown 0.6s ease-out;
+  overflow: hidden;
+}
+
+.header-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--platinum), var(--gold), var(--silver), var(--bronze));
+}
+
+.header-section .row {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-section .col {
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.95rem;
+  font-weight: normal;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.header-section .col:hover {
+  background-color: var(--bg-subtle);
+  transform: translateY(-1px);
+}
+
+.header-section .col strong {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+/* Enhanced total amount with premium visibility */
+.total-amount-due {
+  text-align: left;
+  padding: var(--space-3) var(--space-5);
+  margin-left: var(--space-12);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  position: relative;
+  transition: all var(--transition-standard);
+}
+
+.total-amount-due::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius-sm);
+  transition: height var(--transition-standard);
+}
+
+.total-amount-due:hover::before {
+  height: 85%;
+}
+
+/* Premium kanban board with enhanced layout and visual hierarchy */
+.kanban-container {
+  padding: var(--space-6) var(--space-3);
+  width: 100%;
+  animation: fadeIn 0.8s ease-out;
+  position: relative;
+}
+
+/* Ensure the row displays horizontally */
+.kanban-container .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  gap: var(--space-3);
+}
+
+/* Premium column styling with enhanced visual effects */
+.kanban-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.kanban-column:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-color);
+}
+
+.kanban-column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transition: height var(--transition-standard);
+}
+
+.kanban-column:hover::before {
+  height: 6px;
+}
+
+/* Column color indicators with enhanced gradients */
+#platinum-column::before {
+  background: var(--platinum-gradient);
+}
+
+#gold-column::before {
+  background: var(--gold-gradient);
+}
+
+#silver-column::before {
+  background: var(--silver-gradient);
+}
+
+#bronze-column::before {
+  background: var(--bronze-gradient);
+}
+
+/* Premium column headers with enhanced typography */
+.kanban-column-header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: var(--space-4) var(--space-3);
+  margin-bottom: var(--space-5);
+  letter-spacing: 0.5px;
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.kanban-column-header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  border-radius: var(--border-radius-full);
+  transition: width var(--transition-standard);
+}
+
+.kanban-column:hover .kanban-column-header::after {
+  width: 80px;
+}
+
+.platinum-header {
+  color: var(--text-primary);
+}
+
+.platinum-header::after {
+  background-color: var(--platinum);
+}
+
+.gold-header {
+  color: var(--text-primary);
+}
+
+.gold-header::after {
+  background-color: var(--gold);
+}
+
+.silver-header {
+  color: var(--text-primary);
+}
+
+.silver-header::after {
+  background-color: var(--silver);
+}
+
+.bronze-header {
+  color: var(--text-primary);
+}
+
+.bronze-header::after {
+  background-color: var(--bronze);
+}
+
+.payment-info {
+  display: none;
+}
+
+.kanban-items {
+  min-height: auto;
+  padding: var(--space-2);
+  border: none;
+  background-color: var(--bg-white);
+  border-radius: 0;
+  box-shadow: none;
+  flex-grow: 1;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+/* Custom scrollbar for kanban items */
+.kanban-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.kanban-items::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.kanban-items::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: var(--border-radius-full);
+}
+
+.kanban-items::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
+
+/* Premium card styling with enhanced visual hierarchy and effects */
+.kanban-item {
+  margin-bottom: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  cursor: grab;
+  transition: all var(--transition-standard);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--bg-white);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.kanban-item:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-color);
+  z-index: var(--z-above);
+}
+
+.kanban-item:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+.kanban-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  transition: width var(--transition-standard);
+}
+
+.kanban-item:hover::before {
+  width: 6px;
+}
+
+/* Enhanced card color schemes with subtle backgrounds */
+.platinum-color {
+  background-color: var(--platinum-light);
+}
+
+.platinum-color::before {
+  background: var(--platinum-gradient);
+}
+
+.gold-color {
+  background-color: var(--gold-light);
+}
+
+.gold-color::before {
+  background: var(--gold-gradient);
+}
+
+.silver-color {
+  background-color: var(--silver-light);
+}
+
+.silver-color::before {
+  background: var(--silver-gradient);
+}
+
+.bronze-color {
+  background-color: var(--bronze-light);
+}
+
+.bronze-color::before {
+  background: var(--bronze-gradient);
+}
+
+/* Premium card content styling with enhanced typography */
+.item-header {
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  position: relative;
+  padding-bottom: var(--space-2);
+}
+
+.item-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background-color: var(--border-color);
+  transition: width var(--transition-standard);
+}
+
+.kanban-item:hover .item-header::after {
+  width: 50px;
+}
+
+.item-details {
+  font-size: 0.85rem;
+  margin-bottom: var(--space-2);
+  text-align: center;
+  color: var(--text-secondary);
+  background-color: var(--bg-subtle);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-sm);
+  display: inline-block;
+  margin: 0 auto var(--space-2);
+  transition: all var(--transition-standard);
+}
+
+.kanban-item:hover .item-details {
+  background-color: var(--bg-highlight);
+  transform: scale(1.02);
+}
+
+.item-description {
+  font-size: 0.85rem;
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-light);
+  text-align: left;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  transition: color var(--transition-standard);
+}
+
+.kanban-item:hover .item-description {
+  color: var(--text-primary);
+}
+
+/* Premium payment info with enhanced visual design and effects */
+.payment-info-bottom {
+  margin-top: var(--space-5);
+  text-align: center;
+  background-color: var(--bg-white);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+  transition: all var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-info-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: opacity var(--transition-standard);
+}
+
+.payment-info-bottom:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-color);
+}
+
+.payment-info-bottom:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced horizontal payment cells with improved layout */
+.payment-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--space-2);
+  flex: 1;
+  border-right: 1px solid var(--border-light);
+  transition: all var(--transition-standard);
+}
+
+.payment-cell:last-child {
+  border-right: none;
+}
+
+.payment-info-bottom:hover .payment-cell {
+  transform: translateY(-2px);
+}
+
+.payment-term {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+  transition: color var(--transition-standard);
+}
+
+.payment-info-bottom:hover .payment-term {
+  color: var(--text-primary);
+}
+
+.payment-value {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all var(--transition-standard);
+}
+
+/* Enhanced payment values with premium styling */
+#platinum-payment-bottom,
+#gold-payment-bottom,
+#silver-payment-bottom,
+#bronze-payment-bottom {
+  color: var(--primary);
+}
+
+.payment-info-bottom:hover #platinum-payment-bottom,
+.payment-info-bottom:hover #gold-payment-bottom,
+.payment-info-bottom:hover #silver-payment-bottom,
+.payment-info-bottom:hover #bronze-payment-bottom {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(44, 123, 229, 0.2);
+}
+
+/* Premium action buttons with enhanced effects */
+.action-buttons {
+  padding: var(--space-8) var(--space-6);
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-light);
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-standard);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-3) var(--space-6);
+}
+
+/* Enhanced ripple effect for buttons */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.btn:active::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+/* Premium primary button with enhanced effects */
+.btn-primary {
+  background: var(--primary-gradient);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-primary);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  box-shadow: 0 6px 15px rgba(44, 123, 229, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(44, 123, 229, 0.2);
+}
+
+/* Premium secondary button with enhanced effects */
+.btn-outline-secondary {
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+  background-color: var(--bg-white);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline-secondary:active {
+  transform: translateY(-1px);
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-6);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Enhanced sortable classes with premium visual feedback */
+.sortable-ghost {
+  opacity: 0.5;
+  background-color: var(--bg-subtle) !important;
+  border: 2px dashed var(--border-color) !important;
+  box-shadow: none !important;
+}
+
+.sortable-chosen {
+  box-shadow: var(--shadow-lg) !important;
+  transform: scale(1.03) !important;
+  z-index: var(--z-above);
+}
+
+.sortable-drag {
+  opacity: 0.9;
+  transform: rotate(2deg);
+  cursor: grabbing;
+  box-shadow: var(--shadow-xl) !important;
+}
+
+/* Premium modal styling with enhanced effects */
+.modal-content {
+  border: none;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-light);
+  padding: var(--space-5);
+  background-color: var(--bg-subtle);
+}
+
+.modal-body {
+  padding: var(--space-6) var(--space-5);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-light);
+  padding: var(--space-5);
+  background-color: var(--bg-subtle);
+}
+
+/* Premium success icon with enhanced effects */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto var(--space-5);
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.25);
+  background: linear-gradient(135deg, #28a745, #20c997);
+  position: relative;
+  overflow: hidden;
+  animation: pulseSuccess 2s infinite;
+}
+
+@keyframes pulseSuccess {
+  0% {
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.25);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+  }
+  100% {
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.25);
+  }
+}
+
+.icon-circle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.icon-circle i {
+  position: relative;
+  z-index: 1;
+  animation: bounceIn 0.6s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+/* Premium list group styling with enhanced effects */
+.list-group-item {
+  border-color: var(--border-light);
+  padding: var(--space-4) var(--space-5);
+  transition: all var(--transition-standard);
+  position: relative;
+  overflow: hidden;
+}
+
+.list-group-item:hover {
+  background-color: var(--bg-subtle);
+  transform: translateX(3px);
+}
+
+.list-group-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  transition: width var(--transition-standard);
+}
+
+.list-group-item:hover::after {
+  width: 100%;
+}
+
+/* Premium badge styling with enhanced effects */
+.badge {
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-standard);
+}
+
+.badge.bg-primary {
+  background: var(--primary-gradient) !important;
+  box-shadow: 0 2px 5px rgba(44, 123, 229, 0.2);
+}
+
+.list-group-item:hover .badge.bg-primary {
+  transform: scale(1.1);
+  box-shadow: 0 3px 8px rgba(44, 123, 229, 0.3);
+}
+
+/* Premium responsive adjustments with enhanced mobile experience */
+@media (max-width: 767.98px) {
+  /* For mobile, stack the columns vertically with enhanced transitions */
+  .kanban-container .row {
+    flex-direction: column;
+  }
+
+  .kanban-column {
+    width: 100%;
+    margin: 0 0 var(--space-5) 0;
+    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
+  }
+
+  .kanban-column:hover {
+    transform: translateY(-3px);
+  }
+
+  .header-section .row {
+    flex-direction: column;
+  }
+
+  .header-section .col {
+    text-align: center;
+    padding: var(--space-3);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .header-section .col:last-child {
+    border-bottom: none;
+  }
+
+  /* Adjust payment info for mobile with enhanced layout */
+  .payment-info-bottom {
+    flex-direction: column;
+    padding: var(--space-3);
+  }
+
+  .payment-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    padding: var(--space-3) 0;
+    width: 100%;
+  }
+
+  .payment-cell:last-child {
+    border-bottom: none;
+  }
+
+  /* Enhanced mobile buttons with full width */
+  .action-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--space-3);
+  }
+
+  .action-buttons .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .action-buttons .ms-2 {
+    margin-left: 0 !important;
+  }
+
+  /* Enhanced mobile total amount with centered layout */
+  .total-amount-due {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: var(--space-3);
+  }
+
+  .total-amount-due::before {
+    display: none;
+  }
+
+  /* Add a centered indicator instead */
+  .total-amount-due::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary-gradient);
+    border-radius: var(--border-radius-full);
+  }
+}
+
+/* Premium animations with enhanced timing and effects */
+@keyframes highlight-payment {
+  0% {
+    color: var(--primary);
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(44, 123, 229, 0.3);
+  }
+  100% {
+    color: var(--primary);
+    transform: scale(1);
+    text-shadow: none;
+  }
+}
+
+.payment-highlight {
+  animation: highlight-payment 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes highlight-item {
+  0% {
+    background-color: var(--primary-light);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: inherit;
+    transform: scale(1);
+  }
+}
+
+.highlight-animation {
+  animation: highlight-item 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Page entrance animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced sidebar styling with premium effects */
+#sidebar-wrapper {
+  min-height: 100vh;
+  width: 250px;
+  margin-left: -250px;
+  transition: margin 0.3s ease-out;
+  background-color: var(--bg-white);
+  box-shadow: var(--shadow-md);
+  z-index: var(--z-modal);
+  border-right: 1px solid var(--border-light);
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: var(--space-4) var(--space-5);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--bg-subtle);
+  position: relative;
+}
+
+#sidebar-wrapper .sidebar-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: var(--space-5);
+  width: 50px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius-full);
+}
+
+#sidebar-wrapper .list-group-item {
+  border: none;
+  padding: var(--space-3) var(--space-5);
+  font-size: 0.9rem;
+  border-radius: 0;
+  color: var(--text-secondary);
+  transition: all var(--transition-standard);
+  position: relative;
+  overflow: hidden;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+  padding-left: var(--space-6);
+}
+
+#sidebar-wrapper .list-group-item.active {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-weight: 600;
+  border-left: 3px solid var(--primary);
+}
+
+#sidebar-wrapper .list-group-item.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--primary-gradient);
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+/* Page content styling with enhanced layout */
+#page-content-wrapper {
+  min-width: 100vw;
+  transition: all var(--transition-standard);
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -250px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+
+  #wrapper:not(.toggled) #sidebar-wrapper {
+    margin-left: -250px;
+  }
+}
+
+/* Bootstrap grid overrides to ensure horizontal alignment */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.g-0 {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.g-0 > .col,
+.g-0 > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.col-md-3 {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* Enhanced print styles for better printing */
+@media print {
+  .action-buttons,
+  #sidebar-wrapper,
+  .btn {
+    display: none !important;
+  }
+
+  .kanban-container {
+    display: block;
+  }
+
+  .kanban-column {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: 1px solid #000;
+  }
+
+  .kanban-item {
+    box-shadow: none !important;
+    border: 1px solid #000;
+  }
+
+  body {
+    background-color: white;
+  }
+}
+
+/* Enhanced accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:focus {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Add keyboard focus indicators */
+.kanban-item:focus-visible,
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px var(--border-focus);
+}
+
+/* Add skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: white;
+  padding: 8px;
+  z-index: var(--z-overlay);
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Enhanced toast notifications */
+.toast {
+  border: none;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.toast-header {
+  background: var(--primary-gradient);
+  color: var(--text-light);
+  border-bottom: none;
+  padding: var(--space-3) var(--space-4);
+}
+
+.toast-body {
+  padding: var(--space-4);
+  background-color: var(--bg-white);
+}
+
+/* Add loading states for buttons */
+.btn.is-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.btn.is-loading::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: calc(50% - 0.5rem);
+  left: calc(50% - 0.5rem);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add decorative background elements */
+.container-fluid::before,
+.container-fluid::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(60px);
+  opacity: 0.15;
+}
+
+.container-fluid::before {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--platinum), var(--gold));
+  top: -100px;
+  left: -100px;
+  animation: float-slow 15s ease-in-out infinite alternate;
+}
+
+.container-fluid::after {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--bronze), var(--silver));
+  bottom: -150px;
+  right: -150px;
+  animation: float-slow 18s ease-in-out infinite alternate-reverse;
+}
+
+/* Add animated floating effect */
+@keyframes float-slow {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(50px, 50px) rotate(10deg);
+  }
+}
+
+/* Add subtle animated background grid */
+.kanban-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, var(--border-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-light) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Add subtle animated particles */
+.action-buttons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, var(--primary-light) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.2;
+  z-index: -1;
+  animation: particles 60s linear infinite;
+}
+
+@keyframes particles {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Add a premium header background */
+.header-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%);
+  background-size: 20px 20px;
+  z-index: -1;
+}
+

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Protection Plans - Kanban Board</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vehicle-protection-plans.css">
+</head>
+<body>
+  <div class="container-fluid p-0">
+    <!-- Header Section -->
+    <div class="header-section py-3 px-2">
+        <div class="row g-0 text-center">
+          <div class="col"><strong>Sale Price:</strong> $29,500.00</div>
+          <div class="col"><strong>Sales Tax:</strong> $0.00</div>
+          <div class="col"><strong>Administration Fee:</strong> $599.00</div>
+          <div class="col"><strong>Other Fees:</strong> $2,044.75</div>
+          <div class="col"><strong>Base Payment</strong> (75 months, 5.78% Interest Rate): $511.67</div>
+        </div>
+        <div class="row g-0 mt-2">
+          <div class="col total-amount-due"><strong>Total Amount Due: $32,143.75</strong></div>
+        </div>
+      </div>
+
+    <!-- Kanban Board -->
+    <div class="kanban-container">
+      <div class="row g-0">
+        <!-- Platinum Column -->
+        <div class="col-md-3 kanban-column" id="platinum-column">
+          <div class="kanban-column-header platinum-header">
+            Platinum
+            <div class="payment-info">
+              <div><strong>Term:</strong> <span>75</span></div>
+              <div><strong>Interest Rate:</strong> <span>5.78</span></div>
+              <div><strong>Payment:</strong> <span id="platinum-payment">$584.84</span></div>
+            </div>
+          </div>
+          <div class="kanban-items" id="platinum-items">
+            <!-- ARC / Exclusionary -->
+            <div class="kanban-item platinum-color" data-feature="arc" data-price="25.00">
+              <div class="item-header">ARC / Exclusionary</div>
+              <div class="item-details">60 mo. / 60,000 miles</div>
+              <div class="item-details">$100.00 Disappearing Deductible</div>
+              <div class="item-description">
+                Pays 100% of covered Labor and Parts. Includes Towing, Rental and Roadside Assistance. Comprehensive mechanical & electrical breakdown coverage
+              </div>
+            </div>
+            
+            <!-- GAP -->
+            <div class="kanban-item platinum-color" data-feature="gap" data-price="15.00">
+              <div class="item-header">FP20010811 (GAP 150)</div>
+              <div class="item-details">120 mo.</div>
+              <div class="item-description">
+                Picks up where the insurance company leaves off. In the event your vehicle is totaled or stolen and unrecovered, GAP pays the difference of your payoff and the insurance
+              </div>
+            </div>
+            
+            <!-- GlassCoat -->
+            <div class="kanban-item platinum-color" data-feature="glasscoat" data-price="12.00">
+              <div class="item-header">GlassCoat Lifetime New</div>
+              <div class="item-details">120 mo. / 999,999 miles</div>
+              <div class="item-description">
+                Exterior Protection. Protects against weather-induced fading and loss of gloss, damage from acid rain, bird droppings & tree sap, industrial fallout
+              </div>
+            </div>
+            
+            <!-- QualityGuard -->
+            <div class="kanban-item platinum-color" data-feature="qualityguard" data-price="18.00">
+              <div class="item-header">QualityGuard+Plus Maint $30-3/3,750</div>
+              <div class="item-details">96 mo. / 120,000 miles</div>
+              <div class="item-description">
+                Ensures proper maintenance on your vehicle and offers convenience and exceptional value. Prepays your vehicle's service visits to ensure proper maintenance
+              </div>
+            </div>
+            
+            <!-- Tire & Wheel -->
+            <div class="kanban-item platinum-color" data-feature="tirewheel" data-price="14.00">
+              <div class="item-header">Tire & Wheel - New</div>
+              <div class="item-details">84 mo. / 999,999 miles</div>
+              <div class="item-description">
+                Protection from all road hazards. Repair or replace all tires and wheels and charges associated with the repair or replacement.
+              </div>
+            </div>
+          </div>
+          <div class="payment-info-bottom">
+            <div class="payment-cell">
+              <div class="payment-term">Term:</div>
+              <div class="payment-value">75</div>
+            </div>
+            <div class="payment-cell">
+              <div class="payment-term">Interest Rate:</div>
+              <div class="payment-value">5.78</div>
+            </div>
+            <div class="payment-cell">
+              <div class="payment-term">Payment:</div>
+              <div class="payment-value" id="platinum-payment-bottom">$584.84</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gold Column -->
+        <div class="col-md-3 kanban-column" id="gold-column">
+          <div class="kanban-column-header gold-header">
+            Gold
+            <div class="payment-info">
+              <div><strong>Term:</strong> <span>75</span></div>
+              <div><strong>Interest Rate:</strong> <span>5.78</span></div>
+              <div><strong>Payment:</strong> <span id="gold-payment">$576.90</span></div>
+            </div>
+          </div>
+          <div class="kanban-items" id="gold-items">
+            <!-- ARC / Exclusionary -->
+            <div class="kanban-item gold-color" data-feature="arc" data-price="25.00">
+              <div class="item-header">ARC / Exclusionary</div>
+              <div class="item-details">60 mo. / 60,000 miles</div>
+              <div class="item-details">$100.00 Disappearing Deductible</div>
+              <div class="item-description">
+                Pays 100% of covered Labor and Parts. Includes Towing, Rental and Roadside Assistance. Comprehensive mechanical & electrical breakdown coverage
+              </div>
+            </div>
+            
+            <!-- GAP -->
+            <div class="kanban-item gold-color" data-feature="gap" data-price="15.00">
+              <div class="item-header">FP20010811 (GAP 150)</div>
+              <div class="item-details">120 mo.</div>
+              <div class="item-description">
+                Picks up where the insurance company leaves off. In the event your vehicle is totaled or stolen and unrecovered, GAP pays the difference of your payoff and the insurance
+              </div>
+            </div>
+            
+            <!-- GlassCoat -->
+            <div class="kanban-item gold-color" data-feature="glasscoat" data-price="12.00">
+              <div class="item-header">GlassCoat Lifetime New</div>
+              <div class="item-details">120 mo. / 999,999 miles</div>
+              <div class="item-description">
+                Exterior Protection. Protects against weather-induced fading and loss of gloss, damage from acid rain, bird droppings & tree sap, industrial fallout
+              </div>
+            </div>
+            
+            <!-- QualityGuard -->
+            <div class="kanban-item gold-color" data-feature="qualityguard" data-price="18.00">
+              <div class="item-header">QualityGuard+Plus Maint $30-3/3,750</div>
+              <div class="item-details">96 mo. / 120,000 miles</div>
+              <div class="item-description">
+                Ensures proper maintenance on your vehicle and offers convenience and exceptional value. Prepays your vehicle's service visits to ensure proper maintenance
+              </div>
+            </div>
+          </div>
+          <div class="payment-info-bottom">
+            <div class="payment-cell">
+              <div class="payment-term">Term:</div>
+              <div class="payment-value">75</div>
+            </div>
+            <div class="payment-cell">
+              <div class="payment-term">Interest Rate:</div>
+              <div class="payment-value">5.78</div>
+            </div>
+            <div class="payment-cell">
+              <div class="payment-term">Payment:</div>
+              <div class="payment-value" id="gold-payment-bottom">$576.90</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Silver Column -->
+        <div class="col-md-3 kanban-column" id="silver-column">
+          <div class="kanban-column-header silver-header">
+            Silver
+            <div class="payment-info">
+              <div><strong>Term:</strong> <span>75</span></div>
+              <div><strong>Interest Rate:</strong> <span>5.78</span></div>
+              <div><strong>Payment:</strong> <span id="silver-payment">$567.36</span></div>
+            </div>
+          </div>
+          <div class="kanban-items" id="silver-items">
+            <!-- ARC / Exclusionary -->
+            <div class="kanban-item silver-color" data-feature="arc" data-price="25.00">
+              <div class="item-header">ARC / Exclusionary</div>
+              <div class="item-details">60 mo. / 60,000 miles</div>
+              <div class="item-details">$100.00 Disappearing Deductible</div>
+              <div class="item-description">
+                Pays 100% of covered Labor and Parts. Includes Towing, Rental and Roadside Assistance. Comprehensive mechanical & electrical breakdown coverage
+              </div>
+            </div>
+            
+            <!-- GAP -->
+            <div class="kanban-item silver-color" data-feature="gap" data-price="15.00">
+              <div class="item-header">FP20010811 (GAP 150)</div>
+              <div class="item-details">120 mo.</div>
+              <div class="item-description">
+                Picks up where the insurance company leaves off. In the event your vehicle is totaled or stolen and unrecovered, GAP pays the difference of your payoff and the insurance
+              </div>
+            </div>
+            
+            <!-- GlassCoat -->
+            <div class="kanban-item silver-color" data-feature="glasscoat" data-price="12.00">
+              <div class="item-header">GlassCoat Lifetime New</div>
+              <div class="item-details">120 mo. / 999,999 miles</div>
+              <div class="item-description">
+                Exterior Protection. Protects against weather-induced fading and loss of gloss, damage from acid rain, bird droppings & tree sap, industrial fallout
+              </div>
+            </div>
+          </div>
+          <div class="payment-info-bottom">
+            <div class="payment-cell">
+              <div class="payment-term">Term:</div>
+              <div class="payment-value">75</div>
+            </div>
+            <div class="payment-cell">
+              <div class="payment-term">Interest Rate:</div>
+              <div class="payment-value">5.78</div>
+            </div>
+            <div class="payment-cell">
+              <div class="payment-term">Payment:</div>
+              <div class="payment-value" id="silver-payment-bottom">$567.36</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bronze Column -->
+        <div class="col-md-3 kanban-column" id="bronze-column">
+          <div class="kanban-column-header bronze-header">
+            Bronze
+            <div class="payment-info">
+              <div><strong>Term:</strong> <span>75</span></div>
+              <div><strong>Interest Rate:</strong> <span>5.78</span></div>
+              <div><strong>Payment:</strong> <span id="bronze-payment">$559.42</span></div>
+            </div>
+          </div>
+          <div class="kanban-items" id="bronze-items">
+            <!-- ARC / Exclusionary -->
+            <div class="kanban-item bronze-color" data-feature="arc" data-price="25.00">
+              <div class="item-header">ARC / Exclusionary</div>
+              <div class="item-details">60 mo. / 60,000 miles</div>
+              <div class="item-details">$100.00 Disappearing Deductible</div>
+              <div class="item-description">
+                Pays 100% of covered Labor and Parts. Includes Towing, Rental and Roadside Assistance. Comprehensive mechanical & electrical breakdown coverage
+              </div>
+            </div>
+            
+            <!-- GAP -->
+            <div class="kanban-item bronze-color" data-feature="gap" data-price="15.00">
+              <div class="item-header">FP20010811 (GAP 150)</div>
+              <div class="item-details">120 mo.</div>
+              <div class="item-description">
+                Picks up where the insurance company leaves off. In the event your vehicle is totaled or stolen and unrecovered, GAP pays the difference of your payoff and the insurance
+              </div>
+            </div>
+          </div>
+          <div class="payment-info-bottom">
+            <div class="payment-cell">
+              <div class="payment-term">Term:</div>
+              <div class="payment-value">75</div>
+            </div>
+            <div class="payment-cell">
+              <div class="payment-term">Interest Rate:</div>
+              <div class="payment-value">5.78</div>
+            </div>
+            <div class="payment-cell">
+              <div class="payment-term">Payment:</div>
+              <div class="payment-value" id="bronze-payment-bottom">$559.42</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div class="action-buttons mt-4 mb-5 text-center">
+      <button id="save-button" class="btn btn-primary btn-lg">
+        <i class="fas fa-save me-2"></i>Save Configuration
+      </button>
+      <button id="reset-button" class="btn btn-outline-secondary btn-lg ms-2">
+        <i class="fas fa-undo me-2"></i>Reset to Default
+      </button>
+    </div>
+    
+    <!-- Save Modal -->
+    <div class="modal fade" id="saveModal" tabindex="-1" aria-labelledby="saveModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="saveModalLabel">Configuration Saved</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center mb-4">
+              <div class="icon-circle bg-success text-white mx-auto mb-3">
+                <i class="fas fa-check"></i>
+              </div>
+              <h4>Your protection plan configuration has been saved!</h4>
+              <p class="lead">Monthly payments:</p>
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Platinum
+                  <span class="badge bg-primary rounded-pill" id="modal-platinum-payment">$584.84</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Gold
+                  <span class="badge bg-primary rounded-pill" id="modal-gold-payment">$576.90</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Silver
+                  <span class="badge bg-primary rounded-pill" id="modal-silver-payment">$567.36</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Bronze
+                  <span class="badge bg-primary rounded-pill" id="modal-bronze-payment">$559.42</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Sortable.js for drag and drop -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="vehicle-protection-plans.js"></script>
+</body>
+</html>
+
