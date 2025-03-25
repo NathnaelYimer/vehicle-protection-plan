@@ -1,68 +1,85 @@
-/* Ultra Premium styling for Vehicle Protection Plans */
+/* Ultra Premium styling for Vehicle Protection Plans - Enhanced Edition 2.0 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
-  /* Enhanced color system with gradients */
+  /* Enhanced color system with premium gradients and depth */
   --primary: #2c7be5;
   --primary-hover: #1a68d1;
   --primary-light: rgba(44, 123, 229, 0.1);
   --primary-gradient: linear-gradient(135deg, #2c7be5, #1a68d1);
+  --primary-glow: 0 0 15px rgba(44, 123, 229, 0.5);
 
-  /* Refined plan colors */
+  /* Refined plan colors with enhanced vibrancy and contrast */
   --platinum: #8dd3c7;
   --platinum-light: rgba(141, 211, 199, 0.15);
   --platinum-gradient: linear-gradient(135deg, #8dd3c7, #5aafa0);
+  --platinum-glow: 0 0 20px rgba(141, 211, 199, 0.4);
 
   --gold: #a6cee3;
   --gold-light: rgba(166, 206, 227, 0.15);
   --gold-gradient: linear-gradient(135deg, #a6cee3, #7ab5d6);
+  --gold-glow: 0 0 20px rgba(166, 206, 227, 0.4);
 
   --silver: #ffffb3;
   --silver-light: rgba(255, 255, 179, 0.15);
   --silver-gradient: linear-gradient(135deg, #ffffb3, #e6e68a);
+  --silver-glow: 0 0 20px rgba(255, 255, 179, 0.4);
 
   --bronze: #fdb462;
   --bronze-light: rgba(253, 180, 98, 0.15);
   --bronze-gradient: linear-gradient(135deg, #fdb462, #e89339);
+  --bronze-glow: 0 0 20px rgba(253, 180, 98, 0.4);
 
-  /* Sophisticated text colors */
+  /* Sophisticated text colors with enhanced contrast and readability */
   --text-primary: #12263f;
   --text-secondary: #5e6e82;
   --text-muted: #95aac9;
   --text-light: #ffffff;
+  --text-glow: 0 0 3px rgba(18, 38, 63, 0.1);
 
-  /* Enhanced backgrounds */
+  /* Enhanced backgrounds with subtle texture and depth */
   --bg-light: #f8f9fa;
   --bg-white: #ffffff;
   --bg-subtle: rgba(0, 0, 0, 0.02);
   --bg-highlight: rgba(44, 123, 229, 0.05);
+  --bg-frost: rgba(255, 255, 255, 0.8);
 
-  /* Refined borders */
+  /* Refined borders with enhanced depth and definition */
   --border-color: rgba(0, 0, 0, 0.12);
   --border-light: rgba(0, 0, 0, 0.05);
   --border-focus: rgba(44, 123, 229, 0.5);
+  --border-glow: 0 0 5px rgba(44, 123, 229, 0.3);
 
-  /* Advanced shadows */
+  /* Advanced shadows with enhanced depth perception and layering */
   --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
   --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
   --shadow-primary: 0 4px 10px rgba(44, 123, 229, 0.25);
+  --shadow-frost: 0 8px 20px rgba(255, 255, 255, 0.5);
+  --shadow-depth: 0 30px 60px rgba(0, 0, 0, 0.15);
+  --shadow-layered: 0 1px 2px rgba(0,0,0,0.07), 
+                    0 2px 4px rgba(0,0,0,0.07), 
+                    0 4px 8px rgba(0,0,0,0.07), 
+                    0 8px 16px rgba(0,0,0,0.07);
 
-  /* Refined border radius */
+  /* Refined border radius with enhanced smoothness and consistency */
   --border-radius-sm: 6px;
   --border-radius-md: 10px;
   --border-radius-lg: 16px;
   --border-radius-xl: 24px;
   --border-radius-full: 9999px;
 
-  /* Enhanced transitions */
+  /* Enhanced transitions with premium motion and timing */
   --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-standard: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --transition-elegant: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  --transition-spring: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --transition-smooth: 0.7s cubic-bezier(0.65, 0, 0.35, 1);
 
-  /* Spacing system */
+  /* Spacing system with enhanced precision and rhythm */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -72,15 +89,18 @@
   --space-8: 32px;
   --space-10: 40px;
   --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
 
-  /* Z-index layers */
+  /* Z-index layers with enhanced organization */
   --z-base: 1;
   --z-above: 10;
   --z-modal: 100;
   --z-overlay: 1000;
+  --z-tooltip: 2000;
 }
 
-/* Base styles with premium typography */
+/* Base styles with premium typography and enhanced readability */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.5;
@@ -91,11 +111,38 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(248, 249, 250, 0.8), rgba(248, 249, 250, 0.95)),
+  background-image: 
+    linear-gradient(to bottom, rgba(248, 249, 250, 0.8), rgba(248, 249, 250, 0.95)),
     url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232c7be5' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
 }
 
-/* Custom scrollbar for the entire page */
+/* Enhanced page entrance animation with smoother reveal */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-white);
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  opacity: 0;
+  animation: pageReveal 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes pageReveal {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Custom scrollbar with enhanced premium feel and smoother interaction */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -103,29 +150,35 @@ body {
 
 ::-webkit-scrollbar-track {
   background: var(--bg-light);
+  border-radius: var(--border-radius-full);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--text-muted);
   border-radius: var(--border-radius-full);
   border: 2px solid var(--bg-light);
+  transition: all var(--transition-standard);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Enhanced header section with premium visual appeal */
+/* Enhanced header section with premium visual appeal, depth and glass effect */
 .header-section {
-  background-color: var(--bg-white);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   padding: var(--space-5) 0;
   margin-top: var(--space-3);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-layered);
   position: relative;
-  animation: fadeInDown 0.6s ease-out;
+  animation: fadeInDown 0.8s var(--transition-elegant);
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 5;
 }
 
 .header-section::before {
@@ -136,6 +189,20 @@ body {
   width: 100%;
   height: 3px;
   background: linear-gradient(to right, var(--platinum), var(--gold), var(--silver), var(--bronze));
+  background-size: 300% 100%;
+  animation: shimmerGradient 8s infinite linear;
+}
+
+@keyframes shimmerGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .header-section .row {
@@ -148,13 +215,34 @@ body {
   padding: var(--space-3) var(--space-4);
   font-size: 0.95rem;
   font-weight: normal;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-spring);
   position: relative;
+  overflow: hidden;
 }
 
 .header-section .col:hover {
   background-color: var(--bg-subtle);
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.header-section .col::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  transition: all var(--transition-standard);
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.header-section .col:hover::after {
+  width: 80%;
+  opacity: 1;
 }
 
 .header-section .col strong {
@@ -162,9 +250,17 @@ body {
   color: var(--text-primary);
   display: block;
   margin-bottom: var(--space-1);
+  position: relative;
+  transition: all var(--transition-standard);
 }
 
-/* Enhanced total amount with premium visibility */
+.header-section .col:hover strong {
+  color: var(--primary);
+  text-shadow: var(--text-glow);
+  transform: translateY(-1px);
+}
+
+/* Enhanced total amount with premium visibility, depth and visual emphasis */
 .total-amount-due {
   text-align: left;
   padding: var(--space-3) var(--space-5);
@@ -173,7 +269,9 @@ body {
   font-weight: 700;
   color: var(--text-primary);
   position: relative;
-  transition: all var(--transition-standard);
+  transition: all var(--transition-elegant);
+  border-radius: var(--border-radius-md);
+  background: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0));
 }
 
 .total-amount-due::before {
@@ -186,22 +284,59 @@ body {
   height: 70%;
   background: var(--primary-gradient);
   border-radius: var(--border-radius-sm);
-  transition: height var(--transition-standard);
+  transition: all var(--transition-spring);
+  box-shadow: var(--primary-glow);
+}
+
+.total-amount-due:hover {
+  transform: translateY(-2px);
+  text-shadow: var(--text-glow);
+  background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.2));
 }
 
 .total-amount-due:hover::before {
   height: 85%;
+  width: 6px;
 }
 
-/* Premium kanban board with enhanced layout and visual hierarchy */
+.total-amount-due strong {
+  position: relative;
+  display: inline-block;
+}
+
+.total-amount-due strong::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  transition: width var(--transition-standard);
+  opacity: 0;
+}
+
+.total-amount-due:hover strong::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Premium kanban board with enhanced layout, depth and visual hierarchy */
 .kanban-container {
   padding: var(--space-6) var(--space-3);
   width: 100%;
-  animation: fadeIn 0.8s ease-out;
+  animation: fadeIn 1s var(--transition-elegant);
   position: relative;
+  perspective: 1000px;
+  z-index: 1;
 }
 
-/* Ensure the row displays horizontally */
+/* Enhanced 3D perspective effect on hover with smoother transitions */
+.kanban-container:hover {
+  perspective: 1200px;
+}
+
+/* Ensure the row displays horizontally with enhanced spacing and alignment */
 .kanban-container .row {
   display: flex;
   flex-direction: row;
@@ -209,28 +344,35 @@ body {
   width: 100%;
   margin: 0;
   gap: var(--space-3);
+  transform-style: preserve-3d;
 }
 
-/* Premium column styling with enhanced visual effects */
+/* Premium column styling with enhanced visual effects, depth and glass morphism */
 .kanban-column {
   display: flex;
   flex-direction: column;
   flex: 1;
   height: 100%;
-  background-color: var(--bg-white);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: var(--border-radius-lg);
   padding: var(--space-5);
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-bounce);
+  box-shadow: var(--shadow-layered);
+  transition: all var(--transition-spring);
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border-light);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .kanban-column:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px) scale(1.02) translateZ(10px);
+  box-shadow: var(--shadow-depth);
   border-color: var(--border-color);
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .kanban-column::before {
@@ -240,31 +382,61 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  transition: height var(--transition-standard);
+  transition: all var(--transition-spring);
 }
 
 .kanban-column:hover::before {
-  height: 6px;
+  height: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Column color indicators with enhanced gradients */
+/* Enhanced column color indicators with premium gradients, glow effects and animations */
 #platinum-column::before {
   background: var(--platinum-gradient);
+}
+
+#platinum-column:hover::before {
+  box-shadow: var(--platinum-glow);
+  animation: pulseBorder 2s infinite alternate;
 }
 
 #gold-column::before {
   background: var(--gold-gradient);
 }
 
+#gold-column:hover::before {
+  box-shadow: var(--gold-glow);
+  animation: pulseBorder 2s infinite alternate;
+}
+
 #silver-column::before {
   background: var(--silver-gradient);
+}
+
+#silver-column:hover::before {
+  box-shadow: var(--silver-glow);
+  animation: pulseBorder 2s infinite alternate;
 }
 
 #bronze-column::before {
   background: var(--bronze-gradient);
 }
 
-/* Premium column headers with enhanced typography */
+#bronze-column:hover::before {
+  box-shadow: var(--bronze-glow);
+  animation: pulseBorder 2s infinite alternate;
+}
+
+@keyframes pulseBorder {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Premium column headers with enhanced typography, depth and visual emphasis */
 .kanban-column-header {
   text-align: center;
   font-weight: 700;
@@ -274,6 +446,13 @@ body {
   letter-spacing: 0.5px;
   position: relative;
   border-bottom: 1px solid var(--border-light);
+  transition: all var(--transition-standard);
+  text-transform: uppercase;
+}
+
+.kanban-column:hover .kanban-column-header {
+  letter-spacing: 1px;
+  transform: translateY(-2px);
 }
 
 .kanban-column-header::after {
@@ -285,43 +464,73 @@ body {
   width: 50px;
   height: 3px;
   border-radius: var(--border-radius-full);
-  transition: width var(--transition-standard);
+  transition: all var(--transition-spring);
 }
 
 .kanban-column:hover .kanban-column-header::after {
-  width: 80px;
+  width: 100px;
+  height: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .platinum-header {
   color: var(--text-primary);
+  background: linear-gradient(to right, rgba(141, 211, 199, 0.05), transparent, rgba(141, 211, 199, 0.05));
 }
 
 .platinum-header::after {
   background-color: var(--platinum);
 }
 
+.kanban-column:hover .platinum-header {
+  color: #5aafa0;
+  text-shadow: 0 0 15px rgba(141, 211, 199, 0.3);
+  background: linear-gradient(to right, rgba(141, 211, 199, 0.1), transparent, rgba(141, 211, 199, 0.1));
+}
+
 .gold-header {
   color: var(--text-primary);
+  background: linear-gradient(to right, rgba(166, 206, 227, 0.05), transparent, rgba(166, 206, 227, 0.05));
 }
 
 .gold-header::after {
   background-color: var(--gold);
 }
 
+.kanban-column:hover .gold-header {
+  color: #7ab5d6;
+  text-shadow: 0 0 15px rgba(166, 206, 227, 0.3);
+  background: linear-gradient(to right, rgba(166, 206, 227, 0.1), transparent, rgba(166, 206, 227, 0.1));
+}
+
 .silver-header {
   color: var(--text-primary);
+  background: linear-gradient(to right, rgba(255, 255, 179, 0.05), transparent, rgba(255, 255, 179, 0.05));
 }
 
 .silver-header::after {
   background-color: var(--silver);
 }
 
+.kanban-column:hover .silver-header {
+  color: #d6d663;
+  text-shadow: 0 0 15px rgba(255, 255, 179, 0.3);
+  background: linear-gradient(to right, rgba(255, 255, 179, 0.1), transparent, rgba(255, 255, 179, 0.1));
+}
+
 .bronze-header {
   color: var(--text-primary);
+  background: linear-gradient(to right, rgba(253, 180, 98, 0.05), transparent, rgba(253, 180, 98, 0.05));
 }
 
 .bronze-header::after {
   background-color: var(--bronze);
+}
+
+.kanban-column:hover .bronze-header {
+  color: #e89339;
+  text-shadow: 0 0 15px rgba(253, 180, 98, 0.3);
+  background: linear-gradient(to right, rgba(253, 180, 98, 0.1), transparent, rgba(253, 180, 98, 0.1));
 }
 
 .payment-info {
@@ -332,59 +541,76 @@ body {
   min-height: auto;
   padding: var(--space-2);
   border: none;
-  background-color: var(--bg-white);
+  background-color: transparent;
   border-radius: 0;
   box-shadow: none;
   flex-grow: 1;
   width: 100%;
   overflow-y: auto;
   max-height: 500px;
+  transition: all var(--transition-standard);
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-light) transparent;
 }
 
-/* Custom scrollbar for kanban items */
+.kanban-column:hover .kanban-items {
+  background-color: var(--bg-subtle);
+  padding: var(--space-3);
+}
+
+/* Enhanced custom scrollbar for kanban items with improved visibility */
 .kanban-items::-webkit-scrollbar {
   width: 6px;
 }
 
 .kanban-items::-webkit-scrollbar-track {
   background: transparent;
+  border-radius: var(--border-radius-full);
 }
 
 .kanban-items::-webkit-scrollbar-thumb {
   background: var(--border-light);
   border-radius: var(--border-radius-full);
+  transition: all var(--transition-standard);
 }
 
 .kanban-items::-webkit-scrollbar-thumb:hover {
   background: var(--border-color);
 }
 
-/* Premium card styling with enhanced visual hierarchy and effects */
+/* Premium card styling with enhanced visual hierarchy, depth, effects and glass morphism */
 .kanban-item {
   margin-bottom: var(--space-4);
   padding: var(--space-5);
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-md);
   cursor: grab;
-  transition: all var(--transition-standard);
+  transition: all var(--transition-spring);
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
   width: 100%;
-  background-color: var(--bg-white);
+  background-color: rgba(255, 255, 255, 0.9);
   animation: fadeIn 0.5s ease-out;
+  transform-origin: center;
+  backface-visibility: hidden;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .kanban-item:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-5px) scale(1.02) translateZ(5px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--border-color);
   z-index: var(--z-above);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .kanban-item:active {
   cursor: grabbing;
-  transform: scale(0.98);
+  transform: scale(0.98) rotate(1deg);
+  transition: all 0.1s ease-out;
 }
 
 .kanban-item::before {
@@ -394,20 +620,58 @@ body {
   top: 0;
   height: 100%;
   width: 4px;
-  transition: width var(--transition-standard);
+  transition: all var(--transition-spring);
 }
 
 .kanban-item:hover::before {
-  width: 6px;
+  width: 8px;
 }
 
-/* Enhanced card color schemes with subtle backgrounds */
+/* Enhanced remove button styling with improved visibility and feedback */
+.remove-item-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all var(--transition-standard);
+  z-index: 10;
+  color: var(--text-secondary);
+}
+
+.kanban-item:hover .remove-item-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.remove-item-btn:hover {
+  background-color: #ff4d4f;
+  color: white;
+  border-color: #ff4d4f;
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 0 10px rgba(255, 77, 79, 0.3);
+}
+
+/* Enhanced card color schemes with subtle backgrounds, glow effects and improved contrast */
 .platinum-color {
   background-color: var(--platinum-light);
 }
 
 .platinum-color::before {
   background: var(--platinum-gradient);
+}
+
+.platinum-color:hover {
+  box-shadow: 0 10px 25px rgba(141, 211, 199, 0.2);
 }
 
 .gold-color {
@@ -418,12 +682,20 @@ body {
   background: var(--gold-gradient);
 }
 
+.gold-color:hover {
+  box-shadow: 0 10px 25px rgba(166, 206, 227, 0.2);
+}
+
 .silver-color {
   background-color: var(--silver-light);
 }
 
 .silver-color::before {
   background: var(--silver-gradient);
+}
+
+.silver-color:hover {
+  box-shadow: 0 10px 25px rgba(255, 255, 179, 0.2);
 }
 
 .bronze-color {
@@ -434,7 +706,11 @@ body {
   background: var(--bronze-gradient);
 }
 
-/* Premium card content styling with enhanced typography */
+.bronze-color:hover {
+  box-shadow: 0 10px 25px rgba(253, 180, 98, 0.2);
+}
+
+/* Premium card content styling with enhanced typography, depth and visual hierarchy */
 .item-header {
   font-weight: 700;
   margin-bottom: var(--space-3);
@@ -443,6 +719,12 @@ body {
   color: var(--text-primary);
   position: relative;
   padding-bottom: var(--space-2);
+  transition: all var(--transition-standard);
+}
+
+.kanban-item:hover .item-header {
+  transform: translateY(-2px);
+  letter-spacing: 0.01em;
 }
 
 .item-header::after {
@@ -454,11 +736,32 @@ body {
   width: 30px;
   height: 2px;
   background-color: var(--border-color);
-  transition: width var(--transition-standard);
+  transition: all var(--transition-spring);
 }
 
 .kanban-item:hover .item-header::after {
-  width: 50px;
+  width: 70px;
+  height: 3px;
+}
+
+.platinum-color:hover .item-header::after {
+  background-color: var(--platinum);
+  box-shadow: 0 0 5px rgba(141, 211, 199, 0.3);
+}
+
+.gold-color:hover .item-header::after {
+  background-color: var(--gold);
+  box-shadow: 0 0 5px rgba(166, 206, 227, 0.3);
+}
+
+.silver-color:hover .item-header::after {
+  background-color: var(--silver);
+  box-shadow: 0 0 5px rgba(255, 255, 179, 0.3);
+}
+
+.bronze-color:hover .item-header::after {
+  background-color: var(--bronze);
+  box-shadow: 0 0 5px rgba(253, 180, 98, 0.3);
 }
 
 .item-details {
@@ -471,12 +774,33 @@ body {
   border-radius: var(--border-radius-sm);
   display: inline-block;
   margin: 0 auto var(--space-2);
-  transition: all var(--transition-standard);
+  transition: all var(--transition-spring);
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 .kanban-item:hover .item-details {
   background-color: var(--bg-highlight);
-  transform: scale(1.02);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-sm);
+  color: var(--primary);
+}
+
+.item-details::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.kanban-item:hover .item-details::before {
+  transform: translateX(100%);
 }
 
 .item-description {
@@ -487,18 +811,19 @@ body {
   text-align: left;
   color: var(--text-secondary);
   line-height: 1.6;
-  transition: color var(--transition-standard);
+  transition: all var(--transition-standard);
 }
 
 .kanban-item:hover .item-description {
   color: var(--text-primary);
+  border-top-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Premium payment info with enhanced visual design and effects */
+/* Premium payment info with enhanced visual design, depth, effects and glass morphism */
 .payment-info-bottom {
   margin-top: var(--space-5);
   text-align: center;
-  background-color: var(--bg-white);
+  background-color: rgba(255, 255, 255, 0.85);
   padding: var(--space-4) var(--space-5);
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-lg);
@@ -506,13 +831,15 @@ body {
   color: var(--text-primary);
   box-shadow: var(--shadow-sm);
   width: 100%;
-  transition: all var(--transition-bounce);
+  transition: all var(--transition-spring);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .payment-info-bottom::before {
@@ -524,20 +851,23 @@ body {
   height: 3px;
   background: var(--primary-gradient);
   opacity: 0;
-  transition: opacity var(--transition-standard);
+  transition: all var(--transition-spring);
 }
 
 .payment-info-bottom:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--border-color);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .payment-info-bottom:hover::before {
   opacity: 1;
+  height: 4px;
+  box-shadow: var(--primary-glow);
 }
 
-/* Enhanced horizontal payment cells with improved layout */
+/* Enhanced horizontal payment cells with improved layout, depth and visual hierarchy */
 .payment-cell {
   display: flex;
   flex-direction: column;
@@ -545,7 +875,9 @@ body {
   padding: 0 var(--space-2);
   flex: 1;
   border-right: 1px solid var(--border-light);
-  transition: all var(--transition-standard);
+  transition: all var(--transition-spring);
+  position: relative;
+  overflow: hidden;
 }
 
 .payment-cell:last-child {
@@ -553,7 +885,24 @@ body {
 }
 
 .payment-info-bottom:hover .payment-cell {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+}
+
+.payment-cell::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, var(--bg-highlight), transparent);
+  transition: height var(--transition-standard);
+  opacity: 0;
+}
+
+.payment-info-bottom:hover .payment-cell::before {
+  height: 100%;
+  opacity: 0.5;
 }
 
 .payment-term {
@@ -561,57 +910,77 @@ body {
   font-size: 0.8rem;
   color: var(--text-secondary);
   margin-bottom: var(--space-1);
-  transition: color var(--transition-standard);
+  transition: all var(--transition-standard);
+  position: relative;
+  z-index: 1;
 }
 
 .payment-info-bottom:hover .payment-term {
   color: var(--text-primary);
+  transform: translateY(-1px);
+  letter-spacing: 0.02em;
 }
 
 .payment-value {
   font-weight: 700;
   font-size: 1rem;
   color: var(--text-primary);
-  transition: all var(--transition-standard);
+  transition: all var(--transition-spring);
+  position: relative;
+  z-index: 1;
 }
 
-/* Enhanced payment values with premium styling */
+/* Enhanced payment values with premium styling, glow effects and animations */
 #platinum-payment-bottom,
 #gold-payment-bottom,
 #silver-payment-bottom,
 #bronze-payment-bottom {
   color: var(--primary);
+  position: relative;
 }
 
 .payment-info-bottom:hover #platinum-payment-bottom,
 .payment-info-bottom:hover #gold-payment-bottom,
 .payment-info-bottom:hover #silver-payment-bottom,
 .payment-info-bottom:hover #bronze-payment-bottom {
-  transform: scale(1.1);
-  text-shadow: 0 0 10px rgba(44, 123, 229, 0.2);
+  transform: scale(1.2);
+  text-shadow: 0 0 15px rgba(44, 123, 229, 0.3);
+  letter-spacing: 0.03em;
+  animation: pulsatePayment 1.5s infinite alternate;
 }
 
-/* Premium action buttons with enhanced effects */
+@keyframes pulsatePayment {
+  0% {
+    text-shadow: 0 0 5px rgba(44, 123, 229, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(44, 123, 229, 0.5);
+  }
+}
+
+/* Premium action buttons with enhanced effects, depth and visual feedback */
 .action-buttons {
   padding: var(--space-8) var(--space-6);
   background-color: var(--bg-light);
   border-top: 1px solid var(--border-light);
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 1s var(--transition-elegant);
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 
 .btn {
   font-weight: 500;
   letter-spacing: 0.03em;
   border-radius: var(--border-radius-md);
-  transition: all var(--transition-standard);
+  transition: all var(--transition-spring);
   position: relative;
   overflow: hidden;
   padding: var(--space-3) var(--space-6);
+  box-shadow: var(--shadow-sm);
 }
 
-/* Enhanced ripple effect for buttons */
+/* Enhanced ripple effect for buttons with improved animation and visual feedback */
 .btn::after {
   content: "";
   position: absolute;
@@ -619,7 +988,7 @@ body {
   left: 50%;
   width: 5px;
   height: 5px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   opacity: 0;
   border-radius: 100%;
   transform: scale(1, 1) translate(-50%);
@@ -627,107 +996,155 @@ body {
 }
 
 .btn:active::after {
-  animation: ripple 1s ease-out;
+  animation: ripple 1.2s cubic-bezier(0, 0.5, 0.5, 1);
 }
 
 @keyframes ripple {
   0% {
     transform: scale(0, 0);
-    opacity: 0.5;
+    opacity: 0.7;
   }
   20% {
     transform: scale(25, 25);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
-    transform: scale(40, 40);
+    transform: scale(50, 50);
   }
 }
 
-/* Premium primary button with enhanced effects */
+/* Premium primary button with enhanced effects, depth and visual feedback */
 .btn-primary {
   background: var(--primary-gradient);
   border-color: var(--primary);
   box-shadow: var(--shadow-primary);
   color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+}
+
+.btn-primary:hover::before {
+  transform: translateX(100%);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
   border-color: var(--primary-hover);
-  box-shadow: 0 6px 15px rgba(44, 123, 229, 0.3);
-  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(44, 123, 229, 0.4);
+  transform: translateY(-5px) scale(1.03);
+  letter-spacing: 0.05em;
 }
 
 .btn-primary:active {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(44, 123, 229, 0.2);
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(44, 123, 229, 0.3);
 }
 
-/* Premium secondary button with enhanced effects */
+/* Premium secondary button with enhanced effects, depth and visual feedback */
 .btn-outline-secondary {
   color: var(--text-secondary);
   border-color: var(--border-color);
   background-color: var(--bg-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline-secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.05), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+}
+
+.btn-outline-secondary:hover::before {
+  transform: translateX(100%);
 }
 
 .btn-outline-secondary:hover {
   background-color: var(--bg-subtle);
   color: var(--text-primary);
   border-color: var(--border-color);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: var(--shadow-md);
+  letter-spacing: 0.05em;
 }
 
 .btn-outline-secondary:active {
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-lg {
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-4) var(--space-8);
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
-/* Enhanced sortable classes with premium visual feedback */
+/* Enhanced sortable classes with premium visual feedback, depth and animations */
 .sortable-ghost {
   opacity: 0.5;
   background-color: var(--bg-subtle) !important;
   border: 2px dashed var(--border-color) !important;
   box-shadow: none !important;
+  transform: scale(0.95) !important;
+  backdrop-filter: blur(0) !important;
+  -webkit-backdrop-filter: blur(0) !important;
 }
 
 .sortable-chosen {
-  box-shadow: var(--shadow-lg) !important;
-  transform: scale(1.03) !important;
+  box-shadow: var(--shadow-xl) !important;
+  transform: scale(1.05) !important;
   z-index: var(--z-above);
+  background-color: var(--bg-white) !important;
 }
 
 .sortable-drag {
   opacity: 0.9;
-  transform: rotate(2deg);
+  transform: rotate(3deg) scale(1.05) !important;
   cursor: grabbing;
-  box-shadow: var(--shadow-xl) !important;
+  box-shadow: var(--shadow-depth) !important;
+  z-index: var(--z-modal);
 }
 
-/* Premium modal styling with enhanced effects */
+/* Premium modal styling with enhanced effects, depth and glass morphism */
 .modal-content {
   border: none;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-xl);
   overflow: hidden;
-  animation: modalFadeIn 0.3s ease-out;
+  animation: modalFadeIn 0.5s var(--transition-elegant);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 @keyframes modalFadeIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -735,6 +1152,17 @@ body {
   border-bottom: 1px solid var(--border-light);
   padding: var(--space-5);
   background-color: var(--bg-subtle);
+  position: relative;
+}
+
+.modal-header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--primary), transparent);
 }
 
 .modal-body {
@@ -745,9 +1173,20 @@ body {
   border-top: 1px solid var(--border-light);
   padding: var(--space-5);
   background-color: var(--bg-subtle);
+  position: relative;
 }
 
-/* Premium success icon with enhanced effects */
+.modal-footer::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary));
+}
+
+/* Premium success icon with enhanced effects, depth and 3D animations */
 .icon-circle {
   width: 80px;
   height: 80px;
@@ -757,22 +1196,26 @@ body {
   justify-content: center;
   font-size: 2rem;
   margin: 0 auto var(--space-5);
-  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.25);
+  box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
   background: linear-gradient(135deg, #28a745, #20c997);
   position: relative;
   overflow: hidden;
-  animation: pulseSuccess 2s infinite;
+  animation: pulseSuccess 2.5s infinite;
+  transform-style: preserve-3d;
 }
 
 @keyframes pulseSuccess {
   0% {
-    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.25);
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
+    transform: scale(1) translateZ(0);
   }
   50% {
-    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+    box-shadow: 0 15px 30px rgba(40, 167, 69, 0.5);
+    transform: scale(1.05) translateZ(10px);
   }
   100% {
-    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.25);
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
+    transform: scale(1) translateZ(0);
   }
 }
 
@@ -783,24 +1226,41 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+  animation: rotateLightSource 5s infinite linear;
+}
+
+@keyframes rotateLightSource {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .icon-circle i {
   position: relative;
   z-index: 1;
-  animation: bounceIn 0.6s;
+  animation: bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes bounceIn {
   0% {
     transform: scale(0);
+    opacity: 0;
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -812,18 +1272,21 @@ body {
   color: white !important;
 }
 
-/* Premium list group styling with enhanced effects */
+/* Premium list group styling with enhanced effects, depth and visual feedback */
 .list-group-item {
   border-color: var(--border-light);
   padding: var(--space-4) var(--space-5);
-  transition: all var(--transition-standard);
+  transition: all var(--transition-spring);
   position: relative;
   overflow: hidden;
+  background-color: var(--bg-white);
 }
 
 .list-group-item:hover {
   background-color: var(--bg-subtle);
-  transform: translateX(3px);
+  transform: translateX(5px) scale(1.01);
+  z-index: 2;
+  box-shadow: var(--shadow-sm);
 }
 
 .list-group-item::after {
@@ -834,19 +1297,21 @@ body {
   width: 0;
   height: 2px;
   background: var(--primary-gradient);
-  transition: width var(--transition-standard);
+  transition: width var(--transition-spring);
 }
 
 .list-group-item:hover::after {
   width: 100%;
 }
 
-/* Premium badge styling with enhanced effects */
+/* Premium badge styling with enhanced effects, depth and visual emphasis */
 .badge {
   font-weight: 600;
   padding: 0.5em 0.75em;
   border-radius: var(--border-radius-sm);
-  transition: all var(--transition-standard);
+  transition: all var(--transition-spring);
+  position: relative;
+  overflow: hidden;
 }
 
 .badge.bg-primary {
@@ -855,11 +1320,113 @@ body {
 }
 
 .list-group-item:hover .badge.bg-primary {
-  transform: scale(1.1);
-  box-shadow: 0 3px 8px rgba(44, 123, 229, 0.3);
+  transform: scale(1.15);
+  box-shadow: 0 4px 10px rgba(44, 123, 229, 0.3);
 }
 
-/* Premium responsive adjustments with enhanced mobile experience */
+.badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.list-group-item:hover .badge::before {
+  transform: translateX(100%);
+}
+
+/* Enhanced item removal animation with smoother transitions */
+.item-removing {
+  animation: removeItem 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes removeItem {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px) rotate(-3deg);
+  }
+}
+
+/* Enhanced animations for payment elements with improved visual feedback */
+@keyframes highlight-payment {
+  0% {
+    color: var(--primary);
+    transform: scale(1.3);
+    text-shadow: 0 0 15px rgba(44, 123, 229, 0.4);
+  }
+  100% {
+    color: var(--primary);
+    transform: scale(1);
+    text-shadow: none;
+  }
+}
+
+.payment-highlight {
+  animation: highlight-payment 1s var(--transition-spring);
+}
+
+@keyframes highlight-item {
+  0% {
+    background-color: var(--primary-light);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(44, 123, 229, 0.3);
+  }
+  100% {
+    background-color: inherit;
+    transform: scale(1);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.highlight-animation {
+  animation: highlight-item 1s var(--transition-spring);
+}
+
+/* Enhanced page entrance animations with smoother transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced responsive adjustments with premium mobile experience and improved layout */
 @media (max-width: 767.98px) {
   /* For mobile, stack the columns vertically with enhanced transitions */
   .kanban-container .row {
@@ -869,11 +1436,11 @@ body {
   .kanban-column {
     width: 100%;
     margin: 0 0 var(--space-5) 0;
-    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
+    transition: transform var(--transition-spring), box-shadow var(--transition-standard);
   }
 
   .kanban-column:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
   }
 
   .header-section .row {
@@ -890,7 +1457,7 @@ body {
     border-bottom: none;
   }
 
-  /* Adjust payment info for mobile with enhanced layout */
+  /* Adjust payment info for mobile with enhanced layout and improved readability */
   .payment-info-bottom {
     flex-direction: column;
     padding: var(--space-3);
@@ -907,7 +1474,7 @@ body {
     border-bottom: none;
   }
 
-  /* Enhanced mobile buttons with full width */
+  /* Enhanced mobile buttons with full width, improved spacing and visual feedback */
   .action-buttons .btn {
     display: block;
     width: 100%;
@@ -922,7 +1489,7 @@ body {
     margin-left: 0 !important;
   }
 
-  /* Enhanced mobile total amount with centered layout */
+  /* Enhanced mobile total amount with centered layout, improved visibility and visual emphasis */
   .total-amount-due {
     margin-left: 0;
     text-align: center;
@@ -948,61 +1515,19 @@ body {
   }
 }
 
-/* Premium animations with enhanced timing and effects */
-@keyframes highlight-payment {
-  0% {
-    color: var(--primary);
-    transform: scale(1.2);
-    text-shadow: 0 0 10px rgba(44, 123, 229, 0.3);
-  }
-  100% {
-    color: var(--primary);
-    transform: scale(1);
-    text-shadow: none;
-  }
+/* Enhanced toast notifications with premium styling, depth and animations */
+.toast {
+  border: none;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: toastIn 0.5s var(--transition-spring);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
-.payment-highlight {
-  animation: highlight-payment 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes highlight-item {
-  0% {
-    background-color: var(--primary-light);
-    transform: scale(1.02);
-  }
-  100% {
-    background-color: inherit;
-    transform: scale(1);
-  }
-}
-
-.highlight-animation {
-  animation: highlight-item 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Page entrance animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
+@keyframes toastIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -1013,182 +1538,176 @@ body {
   }
 }
 
-/* Enhanced sidebar styling with premium effects */
-#sidebar-wrapper {
-  min-height: 100vh;
-  width: 250px;
-  margin-left: -250px;
-  transition: margin 0.3s ease-out;
-  background-color: var(--bg-white);
-  box-shadow: var(--shadow-md);
-  z-index: var(--z-modal);
-  border-right: 1px solid var(--border-light);
-}
-
-#sidebar-wrapper .sidebar-heading {
-  padding: var(--space-4) var(--space-5);
-  font-size: 1.2rem;
-  font-weight: 700;
-  border-bottom: 1px solid var(--border-light);
-  background-color: var(--bg-subtle);
+.toast-header {
+  background: var(--primary-gradient);
+  color: var(--text-light);
+  border-bottom: none;
+  padding: var(--space-3) var(--space-4);
   position: relative;
 }
 
-#sidebar-wrapper .sidebar-heading::after {
+.toast-header::after {
   content: "";
   position: absolute;
-  bottom: -1px;
-  left: var(--space-5);
-  width: 50px;
-  height: 3px;
-  background: var(--primary-gradient);
-  border-radius: var(--border-radius-full);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
 }
 
-#sidebar-wrapper .list-group-item {
-  border: none;
-  padding: var(--space-3) var(--space-5);
-  font-size: 0.9rem;
-  border-radius: 0;
-  color: var(--text-secondary);
-  transition: all var(--transition-standard);
+.toast-body {
+  padding: var(--space-4);
+  background-color: var(--bg-white);
+}
+
+/* Enhanced loading states for buttons with premium animations and visual feedback */
+.btn.is-loading {
   position: relative;
-  overflow: hidden;
+  color: transparent !important;
+  pointer-events: none;
 }
 
-#sidebar-wrapper .list-group-item:hover {
-  background-color: var(--bg-subtle);
-  color: var(--text-primary);
-  padding-left: var(--space-6);
+.btn.is-loading::after {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: calc(50% - 0.6rem);
+  left: calc(50% - 0.6rem);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s cubic-bezier(0.5, 0.1, 0.5, 0.9) infinite;
 }
 
-#sidebar-wrapper .list-group-item.active {
-  background-color: var(--primary-light);
-  color: var(--primary);
-  font-weight: 600;
-  border-left: 3px solid var(--primary);
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-#sidebar-wrapper .list-group-item.active::before {
+/* Enhanced decorative background elements with premium effects and depth */
+.container-fluid::before,
+.container-fluid::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.container-fluid::before {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--platinum), var(--gold));
+  top: -150px;
+  left: -150px;
+  animation: float-slow 20s ease-in-out infinite alternate;
+}
+
+.container-fluid::after {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, var(--bronze), var(--silver));
+  bottom: -200px;
+  right: -200px;
+  animation: float-slow 25s ease-in-out infinite alternate-reverse;
+}
+
+/* Enhanced animated floating effect with improved smoothness and natural movement */
+@keyframes float-slow {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(40px, 40px) rotate(7.5deg);
+  }
+  100% {
+    transform: translate(80px, 80px) rotate(15deg);
+  }
+}
+
+/* Enhanced subtle animated background grid with improved depth and visual interest */
+.kanban-container::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--primary-gradient);
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, var(--border-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-light) 1px, transparent 1px);
+  background-size: 25px 25px;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+  animation: gridFade 2s var(--transition-elegant);
 }
 
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
-}
-
-/* Page content styling with enhanced layout */
-#page-content-wrapper {
-  min-width: 100vw;
-  transition: all var(--transition-standard);
-}
-
-@media (min-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
+@keyframes gridFade {
+  from {
+    opacity: 0;
   }
-
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
-  }
-
-  #wrapper.toggled #sidebar-wrapper {
-    margin-left: -250px;
+  to {
+    opacity: 0.2;
   }
 }
 
-@media (max-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
-  }
+/* Enhanced subtle animated particles with improved visual effect and movement */
+.action-buttons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, var(--primary-light) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.2;
+  z-index: -1;
+  animation: particles 80s linear infinite;
+}
 
-  #page-content-wrapper {
-    min-width: 100vw;
+@keyframes particles {
+  0% {
+    background-position: 0 0;
   }
-
-  #wrapper:not(.toggled) #sidebar-wrapper {
-    margin-left: -250px;
+  100% {
+    background-position: 150px 150px;
   }
 }
 
-/* Bootstrap grid overrides to ensure horizontal alignment */
-.container-fluid {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
+/* Enhanced premium header background with improved pattern and visual interest */
+.header-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%);
+  background-size: 25px 25px;
+  z-index: -1;
+  opacity: 0.7;
+  animation: patternFade 2s var(--transition-elegant);
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.g-0 {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.g-0 > .col,
-.g-0 > [class*="col-"] {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.col-md-3 {
-  position: relative;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .col-md-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
+@keyframes patternFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
   }
 }
 
-/* Enhanced print styles for better printing */
-@media print {
-  .action-buttons,
-  #sidebar-wrapper,
-  .btn {
-    display: none !important;
-  }
-
-  .kanban-container {
-    display: block;
-  }
-
-  .kanban-column {
-    page-break-inside: avoid;
-    margin-bottom: 20px;
-    width: 100% !important;
-    box-shadow: none !important;
-    border: 1px solid #000;
-  }
-
-  .kanban-item {
-    box-shadow: none !important;
-    border: 1px solid #000;
-  }
-
-  body {
-    background-color: white;
-  }
-}
-
-/* Enhanced accessibility improvements */
+/* Enhanced accessibility improvements with premium focus states */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1213,168 +1732,161 @@ body {
 :focus-visible {
   outline: 3px solid var(--border-focus);
   outline-offset: 2px;
+  box-shadow: var(--border-glow);
 }
 
-/* Add keyboard focus indicators */
+/* Enhanced keyboard focus indicators with improved visibility */
 .kanban-item:focus-visible,
 .btn:focus-visible {
-  box-shadow: 0 0 0 3px var(--border-focus);
+  box-shadow: 0 0 0 3px var(--border-focus), var(--border-glow);
 }
 
-/* Add skip link for keyboard users */
+/* Enhanced skip link for keyboard users with improved accessibility */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 0;
   background: var(--primary);
   color: white;
-  padding: 8px;
+  padding: 8px 16px;
   z-index: var(--z-overlay);
-  transition: top 0.3s;
+  transition: top 0.3s var(--transition-spring);
+  border-radius: 0 0 var(--border-radius-md) 0;
+  box-shadow: var(--shadow-md);
+  font-weight: 600;
 }
 
 .skip-link:focus {
   top: 0;
 }
 
-/* Enhanced toast notifications */
-.toast {
-  border: none;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-}
-
-.toast-header {
-  background: var(--primary-gradient);
-  color: var(--text-light);
-  border-bottom: none;
-  padding: var(--space-3) var(--space-4);
-}
-
-.toast-body {
-  padding: var(--space-4);
-  background-color: var(--bg-white);
-}
-
-/* Add loading states for buttons */
-.btn.is-loading {
-  position: relative;
-  color: transparent !important;
-  pointer-events: none;
-}
-
-.btn.is-loading::after {
-  content: "";
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: calc(50% - 0.5rem);
-  left: calc(50% - 0.5rem);
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  border-top-color: white;
-  animation: spin 0.6s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+/* Print-specific enhancements for better document output */
+@media print {
+  body {
+    background: white !important;
+    font-size: 12pt;
+  }
+  
+  .kanban-column {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+  }
+  
+  .kanban-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .action-buttons,
+  .remove-item-btn,
+  .btn {
+    display: none !important;
   }
 }
 
-/* Add decorative background elements */
-.container-fluid::before,
-.container-fluid::after {
+/* New visual enhancements for better user experience */
+/* Subtle hover effect for the entire kanban board */
+.kanban-container:hover .kanban-column:not(:hover) {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
+/* Enhanced card count badges */
+.kanban-column-header::before {
+  content: attr(data-count);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--border-radius-full);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all var(--transition-spring);
+}
+
+.kanban-column:hover .kanban-column-header::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Enhanced card stacking effect */
+.kanban-items::after {
   content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 10px;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.03));
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.5;
+  transition: all var(--transition-standard);
+}
+
+.kanban-column:hover .kanban-items::after {
+  opacity: 0.8;
+  height: 15px;
+}
+
+/* Enhanced card hover interactions */
+.kanban-item:hover + .kanban-item {
+  transform: translateY(5px);
+}
+
+/* Improved visual hierarchy with subtle dividers */
+.kanban-column::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  right: -1px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--border-light), transparent);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.kanban-column:last-child::after {
+  display: none;
+}
+
+/* Enhanced loading state for the entire application */
+.app-loading {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: fadeOut 0.5s 1s forwards;
+}
+
+.app-loading::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--border-light);
   border-radius: 50%;
-  z-index: -1;
-  filter: blur(60px);
-  opacity: 0.15;
+  border-top-color: var(--primary);
+  animation: spin 1s infinite linear;
 }
 
-.container-fluid::before {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, var(--platinum), var(--gold));
-  top: -100px;
-  left: -100px;
-  animation: float-slow 15s ease-in-out infinite alternate;
-}
-
-.container-fluid::after {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, var(--bronze), var(--silver));
-  bottom: -150px;
-  right: -150px;
-  animation: float-slow 18s ease-in-out infinite alternate-reverse;
-}
-
-/* Add animated floating effect */
-@keyframes float-slow {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  100% {
-    transform: translate(50px, 50px) rotate(10deg);
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
-
-/* Add subtle animated background grid */
-.kanban-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(to right, var(--border-light) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--border-light) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.3;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* Add subtle animated particles */
-.action-buttons::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(circle, var(--primary-light) 1px, transparent 1px);
-  background-size: 30px 30px;
-  opacity: 0.2;
-  z-index: -1;
-  animation: particles 60s linear infinite;
-}
-
-@keyframes particles {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100px 100px;
-  }
-}
-
-/* Add a premium header background */
-.header-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(135deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
-    linear-gradient(225deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
-    linear-gradient(315deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%),
-    linear-gradient(45deg, rgba(44, 123, 229, 0.05) 25%, transparent 25%);
-  background-size: 20px 20px;
-  z-index: -1;
-}
-

@@ -306,6 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const templates = {
       arc: `
         <div class="kanban-item {color}" data-feature="arc" data-price="25.00">
+          <button class="remove-item-btn" aria-label="Remove item"><i class="fas fa-times"></i></button>
           <div class="item-header">ARC / Exclusionary</div>
           <div class="item-details">60 mo. / 60,000 miles</div>
           <div class="item-details">$100.00 Disappearing Deductible</div>
@@ -316,6 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
       gap: `
         <div class="kanban-item {color}" data-feature="gap" data-price="15.00">
+          <button class="remove-item-btn" aria-label="Remove item"><i class="fas fa-times"></i></button>
           <div class="item-header">FP20010811 (GAP 150)</div>
           <div class="item-details">120 mo.</div>
           <div class="item-description">
@@ -325,6 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
       glasscoat: `
         <div class="kanban-item {color}" data-feature="glasscoat" data-price="12.00">
+          <button class="remove-item-btn" aria-label="Remove item"><i class="fas fa-times"></i></button>
           <div class="item-header">GlassCoat Lifetime New</div>
           <div class="item-details">120 mo. / 999,999 miles</div>
           <div class="item-description">
@@ -334,6 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
       qualityguard: `
         <div class="kanban-item {color}" data-feature="qualityguard" data-price="18.00">
+          <button class="remove-item-btn" aria-label="Remove item"><i class="fas fa-times"></i></button>
           <div class="item-header">QualityGuard+Plus Maint $30-3/3,750</div>
           <div class="item-details">96 mo. / 120,000 miles</div>
           <div class="item-description">
@@ -343,6 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `,
       tirewheel: `
         <div class="kanban-item {color}" data-feature="tirewheel" data-price="14.00">
+          <button class="remove-item-btn" aria-label="Remove item"><i class="fas fa-times"></i></button>
           <div class="item-header">Tire & Wheel - New</div>
           <div class="item-details">84 mo. / 999,999 miles</div>
           <div class="item-description">
@@ -361,6 +366,44 @@ document.addEventListener("DOMContentLoaded", () => {
           const html = templates[feature].replace("{color}", `${column}-color`)
           columnEl.insertAdjacentHTML("beforeend", html)
         }
+      })
+    })
+
+    // Add event listeners to the newly created remove buttons
+    addRemoveButtonListeners()
+  }
+
+  // Function to handle item removal
+  function removeItem(item) {
+    // Get the feature and column
+    const feature = item.getAttribute("data-feature")
+    const column = item.closest(".kanban-items").id.split("-")[0]
+
+    // Add removal animation
+    item.classList.add("item-removing")
+
+    // Remove the item after animation completes
+    setTimeout(() => {
+      item.remove()
+
+      // Update configuration
+      updateCurrentConfig()
+
+      // Update payments
+      updatePayments()
+
+      // Show toast notification
+      showToast("Item Removed", `${feature.toUpperCase()} has been removed from the ${column} plan.`, "info")
+    }, 500)
+  }
+
+  // Function to add event listeners to all remove buttons
+  function addRemoveButtonListeners() {
+    document.querySelectorAll(".remove-item-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation() // Prevent event bubbling
+        const item = btn.closest(".kanban-item")
+        removeItem(item)
       })
     })
   }
@@ -392,7 +435,9 @@ document.addEventListener("DOMContentLoaded", () => {
   `
   document.head.appendChild(style)
 
-  // Initial payment update
+  // Initial setup
+  addRemoveButtonListeners()
+  updateCurrentConfig()
   updatePayments()
 })
 
